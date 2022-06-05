@@ -1,150 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <title>Checkout</title>
+        <title>Checkout</title>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-        <meta name="generator" content="Jekyll v3.8.6">
-    
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/checkout/">
-    
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="" />
+        <meta
+            name="author"
+            content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+        />
+        <meta name="generator" content="Jekyll v3.8.6" />
+
+        <link
+            rel="canonical"
+            href="https://getbootstrap.com/docs/4.4/examples/checkout/"
+        />
+
         <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
 
-      <!-- Link custom CSS styles -->
-      <link href="css/style.css" rel="stylesheet">
-    
-      </head>
+        <!-- Link custom CSS styles -->
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
 
-      <body class="bg-light">
+    <body class="bg-light">
+        <!--Header Nav bar-->
+        <header>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.jpg" alt="Logo" style="width: 40px" />
+                </a>
 
-<!--Top Nav bar-->
-<header>
-  <nav class="site-header sticky-top py-1 bg-dark">
-<div class="container d-flex flex-column flex-md-row justify-content-between">
+                <!-- Toggler/collapsibe Button -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapsibleNavbar"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <a class="py-2" href="#" aria-label="Product">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
-  </a>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="index.html"
+                                style="color: white"
+                                >Home</a
+                            >
+                        </li>
+                        <!-- Dropdown (Products) -->
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbardrop"
+                                data-toggle="dropdown"
+                                style="color: white"
+                            >
+                                Products
+                            </a>
+                            <div class="dropdown-menu bg-dark">
+                                <a class="dropdown-item" href="calm.html"
+                                    >Calming</a
+                                >
+                                <a class="dropdown-item" href="fidgets.html"
+                                    >Fidgets</a
+                                >
+                                <a class="dropdown-item" href="squishies.html"
+                                    >Squishies</a
+                                >
+                            </div>
+                        </li>
 
-  <a class="py-2 d-none d-md-inline-block" href="index.html">Home</a>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="contact.html"
+                                style="color: white"
+                                >Contact Us</a
+                            >
+                        </li>
 
-  <div class="py-0 d-none d-md-inline-block">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background-color:transparent; outline-color: transparent; border-color: transparent;">
-      Products </button>
-    <div class="dropdown-menu bg-dark">
-      <a class="dropdown-item" href="calm.html">Calming</a>
-      <a class="dropdown-item" href="fidgets.html">Fidgets</a>
-      <a class="dropdown-item" href="squishies.html">Squishies</a>
-    </div>
-  </div>
+                        <!-- Dropdown (Cart) -->
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbardrop"
+                                data-toggle="dropdown"
+                                style="color: white"
+                            >
+                                Shopping Cart
+                            </a>
+                            <div class="dropdown-menu bg-dark">
+                                <a
+                                    class="dropdown-item"
+                                    href="cart.html"
+                                    style="color: white"
+                                    >View Cart</a
+                                >
+                                <a
+                                    class="dropdown-item"
+                                    href="checkout.html"
+                                    style="color: white"
+                                    >Checkout</a
+                                >
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-left: auto">
+                        <!--Search bar-->
+                        <form class="form-inline" action="/action_page.php">
+                            <input
+                                class="form-control mr-sm-2"
+                                type="text"
+                                placeholder="Search"
+                            />
+                            <button class="btn btn-success" type="submit">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-  <a class="py-2 d-none d-md-inline-block" href="contact.html">Contact Us</a>
-  <a class="py-2 d-none d-md-inline-block" href="cart.html">View Cart</a>
+        <!--Shopping Cart Heading-->
+        <div class="container">
+            <div class="py-5 text-center">
+                <h2>Shopping Cart</h2>
+            </div>
 
-</div>
-</nav>
-</header>
+            <!-- Cart Display-->
+            <div class="container">
+                <div class="row">
+                    <div class="col order-md-2 mb-4 p-5">
+                        <h4
+                            class="d-flex justify-content-between align-items-center mb-3"
+                        >
+                            <span class="text-muted">Your cart</span>
+                            <span class="badge badge-secondary badge-pill"
+                                >3</span
+                            >
+                        </h4>
+                        <ul class="list-group mb-3">
+                            <li
+                                class="list-group-item d-flex justify-content-between lh-condensed"
+                            >
+                                <div>
+                                    <h6 class="my-0">Product name</h6>
+                                    <small class="text-muted"
+                                        >Brief description</small
+                                    >
+                                </div>
+                                <span class="text-muted">$12</span>
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between lh-condensed"
+                            >
+                                <div>
+                                    <h6 class="my-0">Second product</h6>
+                                    <small class="text-muted"
+                                        >Brief description</small
+                                    >
+                                </div>
+                                <span class="text-muted">$8</span>
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between lh-condensed"
+                            >
+                                <div>
+                                    <h6 class="my-0">Third item</h6>
+                                    <small class="text-muted"
+                                        >Brief description</small
+                                    >
+                                </div>
+                                <span class="text-muted">$5</span>
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between"
+                            >
+                                <span>Total (AUD)</span>
+                                <strong>$20</strong>
+                            </li>
+                        </ul>
 
-<!--Shopping Cart Heading-->
-      <div class="container">
-      <div class="py-5 text-center">
-        <h2>Shopping Cart</h2>
-      </div>
-
-<!-- Cart Display-->
-<div class="container">
-
-          <div class="row">
-            <div class="col order-md-2 mb-4 p-5">
-              <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Your cart</span>
-                <span class="badge badge-secondary badge-pill">3</span>
-              </h4>
-              <ul class="list-group mb-3">
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div>
-                    <h6 class="my-0">Product name</h6>
-                    <small class="text-muted">Brief description</small>
-                  </div>
-                  <span class="text-muted">$12</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div>
-                    <h6 class="my-0">Second product</h6>
-                    <small class="text-muted">Brief description</small>
-                  </div>
-                  <span class="text-muted">$8</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div>
-                    <h6 class="my-0">Third item</h6>
-                    <small class="text-muted">Brief description</small>
-                  </div>
-                  <span class="text-muted">$5</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between">
-                  <span>Total (AUD)</span>
-                  <strong>$20</strong>
-                </li>
-              </ul>
-
-
-              <div class="container">
-                <!-- <div class="row">
+                        <div class="container">
+                            <!-- <div class="row">
                   <div class="col-4">
                     <a href="products.html" class = "btn btn-secondary my-2 bg-secondary">Continue Shopping</a>
                     <div class="col-4">
                     <a href="checkout.html" class = "btn btn-primary my-2 bg-primary">Continue To Checkout</a>
                 </div> -->
-            
-                  <div class="row">
-                    <div class="col p-md-3 text-left">
-                    <a href="index.html" class = "btn btn-secondary my-2 bg-secondary">Continue Shopping</a> 
-                  </div>
-                    <div class="col p-md-3 text-right">
-                      <a href="checkout.html" class = "btn btn-primary my-2 bg-primary">Proceed To Checkout</a>
+
+                            <div class="row">
+                                <div class="col p-md-3 text-left">
+                                    <a
+                                        href="index.html"
+                                        class="btn btn-secondary my-2 bg-secondary"
+                                        >Continue Shopping</a
+                                    >
+                                </div>
+                                <div class="col p-md-3 text-right">
+                                    <a
+                                        href="checkout.html"
+                                        class="btn btn-primary my-2 bg-primary"
+                                        >Proceed To Checkout</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-<!-- Checkout or continue shopping buttons-->
+        <!-- Checkout or continue shopping buttons-->
 
+        <!--Footer-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col text-left pt-5">
+                        <p>© Sensory Toys 2022</p>
+                    </div>
 
+                    <div class="col text-right pt-5">
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-muted" href="contact.html"
+                                    >Contact Us</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-<!--Footer-->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col text-left pt-5">
-        <p>© Sensory Toys 2022</p>
-      </div>
-    
-      <div class="col text-right pt-5">
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-  
-    </div>
-  
-      </footer>
-
-      <!-- Bootstrap core JavaScript
+        <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            window.jQuery ||
+                document.write(
+                    '<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>'
+                )
+        </script>
+        <script
+            src="/docs/4.4/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>

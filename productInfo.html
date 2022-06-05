@@ -1,178 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Product Info</title>
+    <head>
+        <title>Product Info</title>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Link Bootstrap core CSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Link Bootstrap core CSS-->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
 
-    <!-- Link custom CSS styles -->
-    <link href="css/style.css" rel="stylesheet">
+        <!-- Link custom CSS styles -->
+        <link href="css/style.css" rel="stylesheet" />
 
-    <!--Link custom JS-->
-    <script src="js/script.js"></script>
+        <!--Link custom JS-->
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <!--Header Nav bar-->
+        <header>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.jpg" alt="Logo" style="width: 40px" />
+                </a>
 
-        
-</head>
-<body>
-<!--Top Nav bar-->
-<header>
-  <nav class="site-header sticky-top py-1 bg-dark">
-<div class="container d-flex flex-column flex-md-row justify-content-between">
+                <!-- Toggler/collapsibe Button -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapsibleNavbar"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <a class="py-2" href="#" aria-label="Product">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
-  </a>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="index.html"
+                                style="color: white"
+                                >Home</a
+                            >
+                        </li>
 
-  <a class="py-2 d-none d-md-inline-block" href="index.html">Home</a>
+                        <!-- Dropdown (Products) -->
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbardrop"
+                                data-toggle="dropdown"
+                                style="color: white"
+                            >
+                                Products
+                            </a>
+                            <div class="dropdown-menu bg-dark">
+                                <a class="dropdown-item" href="calm.html"
+                                    >Calming</a
+                                >
+                                <a class="dropdown-item" href="fidgets.html"
+                                    >Fidgets</a
+                                >
+                                <a class="dropdown-item" href="squishies.html"
+                                    >Squishies</a
+                                >
+                            </div>
+                        </li>
 
-  <div class="py-0 d-none d-md-inline-block">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background-color:transparent; outline-color: transparent; border-color: transparent;">
-      Products
-    </button>
-    <div class="dropdown-menu bg-dark">
-      <a class="dropdown-item" href="calm.html">Calming</a>
-      <a class="dropdown-item" href="fidgets.html">Fidgets</a>
-      <a class="dropdown-item" href="squishies.html">Squishies</a>
-    </div>
-  </div>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="contact.html"
+                                style="color: white"
+                                >Contact Us</a
+                            >
+                        </li>
 
-  <a class="py-2 d-none d-md-inline-block" href="contact.html">Contact Us</a>
-  <a class="py-2 d-none d-md-inline-block" href="cart.html">View Cart</a>
+                        <!-- Dropdown (Cart) -->
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbardrop"
+                                data-toggle="dropdown"
+                                style="color: white"
+                            >
+                                Shopping Cart
+                            </a>
+                            <div class="dropdown-menu bg-dark">
+                                <a
+                                    class="dropdown-item"
+                                    href="cart.html"
+                                    style="color: white"
+                                    >View Cart</a
+                                >
+                                <a
+                                    class="dropdown-item"
+                                    href="checkout.html"
+                                    style="color: white"
+                                    >Checkout</a
+                                >
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-left: auto">
+                        <!--Search bar-->
+                        <form class="form-inline" action="/action_page.php">
+                            <input
+                                class="form-control mr-sm-2"
+                                type="text"
+                                placeholder="Search"
+                            />
+                            <button class="btn btn-success" type="submit">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-</div>
-</nav>
-</header>
+        <!-- Product Info Header -->
+        <div class="container">
+            <div class="py-5 text-center">
+                <h2>Product Details Page (Template Example)</h2>
+            </div>
 
-<!-- Product Info Header -->
-<div class="container">
-    <div class="py-5 text-center">
-      <h2>Product Details Page (Template Example)</h2>
-    </div>
+            <!--Product Details Section-->
 
+            <!--Product Images-->
+            <div class="container mt-5 mb-5">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-6 border-end">
+                            <div
+                                class="d-flex flex-column justify-content-center text-center mt-5"
+                            >
+                                <div class="main_image">
+                                    <img
+                                        src="images/prodinfo1.jpg"
+                                        id="main_product_image"
+                                        width="350"
+                                        style="
+                                            border-color: darkgrey;
+                                            border-radius: 20%;
+                                            border-width: thick;
+                                        "
+                                    />
+                                </div>
+                                <div class="thumbnail_images">
+                                    <ul id="thumbnail" style="list-style: none">
+                                        <div class="container">
+                                            <div class="row mt-3 p-3">
+                                                <div class="col">
+                                                    <li>
+                                                        <img
+                                                            src="images/prodinfo2.jpg"
+                                                            width="70"
+                                                            style="
+                                                                border-color: darkgrey;
+                                                                border-radius: 20%;
+                                                                border-width: thick;
+                                                            "
+                                                        />
+                                                    </li>
+                                                </div>
+                                                <div class="col">
+                                                    <li>
+                                                        <img
+                                                            src="images/prodinfo3.jpg"
+                                                            width="70"
+                                                            style="
+                                                                border-color: darkgrey;
+                                                                border-radius: 20%;
+                                                                border-width: thick;
+                                                            "
+                                                        />
+                                                    </li>
+                                                </div>
+                                                <div class="col">
+                                                    <li>
+                                                        <img
+                                                            src="images/prodinfo4.jpg"
+                                                            width="70"
+                                                            style="
+                                                                border-color: darkgrey;
+                                                                border-radius: 20%;
+                                                                border-width: thick;
+                                                            "
+                                                        />
+                                                    </li>
+                                                </div>
+                                                <div class="col">
+                                                    <li>
+                                                        <img
+                                                            src="images/prodinfo5.jpg"
+                                                            width="70"
+                                                            style="
+                                                                border-color: darkgrey;
+                                                                border-radius: 20%;
+                                                                border-width: thick;
+                                                            "
+                                                        />
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-<!--Product Details Section-->
-
-<!--Product Images-->
-<div class="container mt-5 mb-5">	
-    <div class="card">	
-        <div class="row g-0">	
-            <div class="col-md-6 border-end">	
-                <div class="d-flex flex-column justify-content-center text-center mt-5">	
-                    <div class="main_image">	
-                        <img src="images/prodinfo1.jpg" id="main_product_image" width="350" style="border-color:darkgrey; border-radius: 20%; border-width:thick;">	
-                    </div>	
-                    <div class="thumbnail_images">	
-                        <ul id="thumbnail" style="list-style:none">	
-                            <div class="container">
-                                <div class="row mt-3 p-3">
-                                    <div class="col">
-                                        <li><img src="images/prodinfo2.jpg" width="70" style="border-color:darkgrey; border-radius: 20%; border-width:thick;"></li>	
+                        <!--Product Title-->
+                        <div class="col-md-6">
+                            <div class="p-3 right-side">
+                                <div
+                                    class="d-flex justify-content-between align-items-center mt-5"
+                                >
+                                    <h3>
+                                        Inflatable Cheeseburger Comfort Floor
+                                        Cushion
+                                    </h3>
+                                    <span class="heart">
+                                        <i class="bx bx-heart"></i
+                                    ></span>
+                                </div>
+                                <div class="mt-2 pr-3 content">
+                                    <p>
+                                        Our Floor Floaties™ combine the soft
+                                        touch of your child’s favourite plush
+                                        with the comfort of a personal-sized
+                                        couch. We designed them to be the
+                                        heartbeat of any play space—ready for
+                                        interactive play yet cozy enough for
+                                        kids to catch up on their favourite
+                                        shows, games, and creative activities.
+                                    </p>
+                                </div>
+                                <h3>$120.00</h3>
+                                <div
+                                    class="ratings d-flex flex-row align-items-center"
+                                >
+                                    <div class="d-flex flex-row">
+                                        <i class="bx bxs-star"></i>
+                                        <i class="bx bxs-star"></i>
+                                        <i class="bx bxs-star"></i>
+                                        <i class="bx bxs-star"></i>
+                                        <i class="bx bx-star"></i>
                                     </div>
-                                    <div class="col">
-                                        <li><img src="images/prodinfo3.jpg" width="70" style="border-color:darkgrey; border-radius: 20%; border-width:thick;"></li>	
-                                    </div>
-                                    <div class="col">	
-                                        <li><img src="images/prodinfo4.jpg" width="70" style="border-color:darkgrey; border-radius: 20%; border-width:thick;"></li>	
-                                    </div>
-                                    <div class="col">
-                                        <li><img src="images/prodinfo5.jpg" width="70" style="border-color:darkgrey; border-radius: 20%; border-width:thick;"></li>	
+                                    <span>441 reviews</span>
+                                </div>
+
+                                <!--Color options-->
+                                <div class="mt-5">
+                                    <span class="fw-bold">Color Options</span>
+                                    <div class="colorOptions">
+                                        <ul
+                                            id="colorOptions"
+                                            style="list-style: none"
+                                        >
+                                            <div class="row p-2">
+                                                <li>
+                                                    <img
+                                                        src="images/color1.jpg"
+                                                        width="30"
+                                                        style="
+                                                            border-color: darkgrey;
+                                                            border-radius: 20%;
+                                                            border-width: thick;
+                                                        "
+                                                    />
+                                                </li>
+                                                <li>
+                                                    <img
+                                                        src="images/color2.jpg"
+                                                        width="30"
+                                                        style="
+                                                            border-color: darkgrey;
+                                                            border-radius: 20%;
+                                                            border-width: thick;
+                                                        "
+                                                    />
+                                                </li>
+                                                <li>
+                                                    <img
+                                                        src="images/color3.jpg"
+                                                        width="30"
+                                                        style="
+                                                            border-color: darkgrey;
+                                                            border-radius: 20%;
+                                                            border-width: thick;
+                                                        "
+                                                    />
+                                                </li>
+                                            </div>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </ul>	
-                    </div>	
-                </div>	
-            </div>	
 
-<!--Product Title-->
-            <div class="col-md-6">	
-                <div class="p-3 right-side">	
-                    <div class="d-flex justify-content-between align-items-center mt-5">	
-                        <h3>Inflatable Cheeseburger Comfort Floor Cushion</h3>	
-                        <span class="heart">
-                            <i class='bx bx-heart'></i></span>	
-                        </div>	
-                        <div class="mt-2 pr-3 content">	
-                            <p>Our Floor Floaties™ combine the soft touch of your child’s favourite plush with the comfort of a personal-sized couch. We designed them to be the heartbeat of any play space—ready for interactive play yet cozy enough for kids to catch up on their favourite shows, games, and creative activities.
-                            </p>	
-                        </div>	
-                        <h3>$120.00</h3>	
-                        <div class="ratings d-flex flex-row align-items-center">	
-                            <div class="d-flex flex-row">	
-                                <i class='bx bxs-star' ></i>	
-                                <i class='bx bxs-star' ></i>	
-                                <i class='bx bxs-star' ></i>	
-                                <i class='bx bxs-star' ></i>	
-                                <i class='bx bx-star' ></i>	
-                            </div>	
-                            <span>441 reviews</span>	
-                        </div>	
-
-<!--Color options-->
-                        <div class="mt-5">	
-                            <span class="fw-bold">Color Options</span>	
-                            <div class="colorOptions">	
-                                <ul id="colorOptions" style="list-style:none">	
-                                <div class="row p-2">
-                                        <li><img src="images/color1.jpg" width="30" style="border-color:darkgrey; border-radius: 20%; border-width:thick;"></li>	
-                                        <li><img src="images/color2.jpg" width="30" style="border-color:darkgrey; border-radius: 20%; border-width:thick;"></li>	
-                                        <li><img src="images/color3.jpg" width="30" style="border-color:darkgrey; border-radius: 20%; border-width:thick;"></li>	
-                                    </div>
-                                </ul>
-                                </div>
-                            </div>	
-                        </div>	
-
-<!--Buy Now & Add to Cart Buttons-->
-                        <div class="buttons d-flex flex-row mb-5 d-flex justify-content-end">	
+                            <!--Buy Now & Add to Cart Buttons-->
+                            <div
+                                class="buttons d-flex flex-row mb-5 d-flex justify-content-end"
+                            >
                                 <div class="row m-3">
-                                    <button class="btn btn-secondary">Add to Cart</button>	
-                                    </div>
+                                    <button class="btn btn-secondary">
+                                        Add to Cart
+                                    </button>
+                                </div>
                                 <div class="row m-3">
                                     <a href="cart.html">
-                                        <button class="btn btn-primary">Buy Now</button>	
+                                        <button class="btn btn-primary">
+                                            Buy Now
+                                        </button>
                                     </a>
+                                </div>
                             </div>
-                        </div>	
-                    </div>	
-                </div>	
-            </div>	
-        </div>	
-    </div> 
-</div>
-
-
-<!--Footer-->
-<footer>
-    <div class="container">
-      <div class="row">
-        <div class="col text-left pt-5">
-          <p>© Sensory Toys 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      
-        <div class="col text-right pt-5">
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    
-      </div>
-    
+
+        <!--Footer-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col text-left pt-5">
+                        <p>© Sensory Toys 2022</p>
+                    </div>
+
+                    <div class="col text-right pt-5">
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-muted" href="contact.html"
+                                    >Contact Us</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </footer>
 
-    <!-- Link JS Bootstrap-->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-</body>
+        <!-- Link JS Bootstrap-->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS-->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            window.jQuery ||
+                document.write(
+                    '<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>'
+                )
+        </script>
+        <script
+            src="/docs/4.4/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
