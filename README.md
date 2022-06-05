@@ -1,2 +1,0 @@
-# SensoryToyShop
-Sensory Toy Shop
